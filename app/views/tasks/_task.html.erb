@@ -5,6 +5,7 @@
                          id: task.id,
                          action: "tasks#toggle"
                        },
+                       checked: task.completed?,
                        class: "mr-2 align-middle bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-5 w-5 rounded checked:bg-green-500" %>
     <%= task.name %>
   <% end %>

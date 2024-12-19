@@ -6,8 +6,7 @@ module Tasks
 
     def call
       task = Task.find(@task_id)
-      task.complete! unless task.completed?
-      task.reopen! unless task.in_progress?
+      task.completed? ? task.reopen! : task.complete!
     end
   end
 end
