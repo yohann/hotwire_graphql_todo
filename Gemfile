@@ -51,6 +51,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
   gem "annotate"
   gem "pry-rails"
+  gem "hotwire-livereload", "~> 1.4"
 end
 
 group :development do
@@ -69,5 +70,4 @@ gem "tailwindcss-rails", "~> 3.0"
 gem "simple_enum"
 gem "aasm"
 
-gem "hotwire-livereload", "~> 1.4", :group => :development
 gem "redis"
