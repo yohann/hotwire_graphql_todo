@@ -16,9 +16,15 @@ class TasksController < ApplicationController
     end
   end
 
+  def toggle
+    Tasks::Toggle.new(params[:id]).call
+
+    render json: { message: "Success" }
+  end
+
   private
 
   def task_params
-    params.require(:task).permit(:description)
+    params.require(:task).permit(:name, :description)
   end
 end
