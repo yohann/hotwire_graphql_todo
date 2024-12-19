@@ -63,3 +63,11 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "tailwindcss-rails", "~> 3.0"
+
+gem "simple_enum"
+gem "aasm"
+
+gem "hotwire-livereload", "~> 1.4", :group => :development
+gem "redis"
