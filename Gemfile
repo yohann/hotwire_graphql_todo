@@ -77,3 +77,5 @@ gem "aasm"
 gem "redis"
 
 gem "graphql"
+
+gem "rack-cors"
