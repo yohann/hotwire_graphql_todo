@@ -2,10 +2,10 @@
 
 module Types
   class MutationType < Types::BaseObject
-    field :toggle, Boolean, null: false do
+    field :toggle_task, Boolean, null: false do
       argument :task_id, ID, required: true
     end
-    def toggle(task_id:)
+    def toggle_task(task_id:)
       Tasks::Toggle.new(task_id).call
     end
 
@@ -14,14 +14,23 @@ module Types
       argument :description, String, required: true
     end
     def create_task(name:, description:)
-      Tasks::Create.new(name, description).call
+      Tasks::Create.call(name, description)
+    end
+
+    field :update_task, Boolean, null: false do
+      argument :task_id, ID, required: true
+      argument :name, String, required: false
+      argument :description, String, required: false
+    end
+    def update_task(task_id:, name:, description:)
+      Tasks::Update.call(name, description)
     end
 
     field :destroy_task, Boolean, null: false do
       argument :task_id, ID, required: true
     end
     def destroy_task(task_id:)
-      Tasks::Destroy.new(task_id).call
+      Tasks::Destroy.call(task_id)
     end
   end
 end
