@@ -1,5 +1,5 @@
 module Tasks
-  class Update
+  class Update < ApplicationBusiness
     def initialize(id, name, description)
       @id = id
       @name = name

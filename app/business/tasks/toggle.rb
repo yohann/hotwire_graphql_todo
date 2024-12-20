@@ -1,5 +1,5 @@
 module Tasks
-  class Toggle
+  class Toggle < ApplicationBusiness
     def initialize(task_id)
       @task_id = task_id
     end

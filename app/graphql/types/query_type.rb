@@ -32,7 +32,7 @@ module Types
       argument :state, String, required: false
     end
     def tasks(state: nil)
-      state ? Task.where(state: state) : Task.all
+      Tasks::Index.new(state).call
     end
   end
 end

@@ -1,5 +1,5 @@
 module Tasks
-  class Create
+  class Create < ApplicationBusiness
     def initialize(name, description)
       @name = name
       @description = description

@@ -1,5 +1,5 @@
 module Tasks
-  class Destroy
+  class Destroy < ApplicationBusiness
     def initialize(task_id)
       @task_id = task_id
     end
