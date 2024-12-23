@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "Tasks::Toggle" do
   subject { Tasks::Toggle.new(task.id).call }
 
-  let(:task) { FactoryBot.create(:task, state_cd: state_cd) }
+  let(:task) { create(:task, state_cd: state_cd) }
 
   describe "when state_cd is in_progress" do
     let(:state_cd) { :in_progress }

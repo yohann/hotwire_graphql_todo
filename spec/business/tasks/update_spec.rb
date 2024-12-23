@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Tasks::Update do
   subject { Tasks::Update.new(task.id, name, description).call }
 
-  let!(:task) { FactoryBot.create(:task) }
+  let!(:task) { create(:task) }
   let(:name) { "New Title" }
   let(:description) { "New Description" }
 

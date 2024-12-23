@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Tasks::Index do
   subject { Tasks::Index.new.call }
 
-  let!(:task) { FactoryBot.create(:task) }
+  let!(:task) { create(:task) }
 
   it "must return all tasks" do
     tasks = subject
