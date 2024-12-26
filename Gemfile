@@ -53,7 +53,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
   gem "annotate"
   gem "pry-rails"
-  gem "hotwire-livereload", "~> 1.4"
+  gem "hotwire-livereload", "~> 2.0"
   gem "factory_bot_rails"
   gem "faker", "~> 2.0"
   gem "rspec-rails"
