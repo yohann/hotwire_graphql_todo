@@ -55,7 +55,7 @@ group :development, :test do
   gem "pry-rails"
   gem "hotwire-livereload", "~> 1.4"
   gem "factory_bot_rails"
-  gem "faker", "~> 2.0"
+  gem "faker", "~> 3.5"
   gem "rspec-rails"
 end
 
